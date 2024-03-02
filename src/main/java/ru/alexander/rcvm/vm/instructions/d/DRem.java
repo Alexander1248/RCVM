@@ -1,11 +1,11 @@
 package ru.alexander.rcvm.vm.instructions.d;
 
-import ru.alexander.rcvm.vm.Instruction;
+import ru.alexander.rcvm.vm.RCVMInstruction;
 import ru.alexander.rcvm.vm.RCVMInterface;
 
 import java.nio.ByteBuffer;
 
-public class DRem implements Instruction {
+public class DRem implements RCVMInstruction {
     @Override
     public boolean execute(RCVMInterface vm) {
         if (Byte.toUnsignedInt(vm.getCode()) != 37) return false;

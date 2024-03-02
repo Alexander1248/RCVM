@@ -7,7 +7,7 @@ import ru.alexander.rcvm.vm.instructions.system.*;
 import ru.alexander.rcvm.vm.instructions.transforms.*;
 
 public class RCVM {
-    private final Instruction[] instructions;
+    private final RCVMInstruction[] instructions;
 
     public byte[] memory;
 
@@ -22,7 +22,7 @@ public class RCVM {
 
     private final RCVMInterface RCVMInterface;
 
-    public RCVM(Instruction[] instructions) {
+    public RCVM(RCVMInstruction[] instructions) {
         this.instructions = instructions;
         stackPtr = 0;
         codePtr = 0;
@@ -30,7 +30,7 @@ public class RCVM {
     }
 
     public RCVM() {
-        this(new Instruction[]{
+        this(new RCVMInstruction[]{
                 new End(),
                 new JIfT(),
                 new Jump(),
@@ -38,6 +38,8 @@ public class RCVM {
                 new Pull(),
                 new Push(),
                 new Set(),
+                new Put(),
+                new Ptr(),
 
                 new LAdd(),
                 new LAnd(),
@@ -56,6 +58,7 @@ public class RCVM {
                 new LRs(),
                 new LSub(),
                 new LXor(),
+                new LAbs(),
 
                 new DAdd(),
                 new DCos(),
@@ -74,6 +77,7 @@ public class RCVM {
                 new DSin(),
                 new DSqrt(),
                 new DSub(),
+                new DAbs(),
 
                 new BToL(),
                 new DToF(),
@@ -89,7 +93,7 @@ public class RCVM {
     }
     public void execute() {
         state = 0;
-        for (Instruction instruction : instructions)
+        for (RCVMInstruction instruction : instructions)
             if (instruction.execute(RCVMInterface))
                 break;
     }

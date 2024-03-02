@@ -15,8 +15,4 @@ public class RCVMException extends RuntimeException {
     public RCVMException(Throwable cause) {
         super(cause);
     }
-
-    public RCVMException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-        super(message, cause, enableSuppression, writableStackTrace);
-    }
 }

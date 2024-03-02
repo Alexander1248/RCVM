@@ -1,11 +1,11 @@
 package ru.alexander.rcvm.vm.instructions.l;
 
-import ru.alexander.rcvm.vm.Instruction;
+import ru.alexander.rcvm.vm.RCVMInstruction;
 import ru.alexander.rcvm.vm.RCVMInterface;
 
 import java.nio.ByteBuffer;
 
-public class LEq implements Instruction {
+public class LEq implements RCVMInstruction {
     @Override
     public boolean execute(RCVMInterface vm) {
         if (Byte.toUnsignedInt(vm.getCode()) != 27) return false;

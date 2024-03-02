@@ -61,6 +61,9 @@ public class RCVMInterface {
     public void jumpCodePtr(int pointer) {
         vm.codePtr = pointer;
     }
+    public int getCodePtr() {
+        return vm.codePtr;
+    }
 
     public byte[] getCode(int length) {
         if (vm.code == null)

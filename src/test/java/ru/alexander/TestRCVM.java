@@ -1,7 +1,7 @@
 package ru.alexander;
 
 import org.junit.jupiter.api.Test;
-import ru.alexander.rcvm.vm.Instruction;
+import ru.alexander.rcvm.vm.RCVMInstruction;
 import ru.alexander.rcvm.vm.RCVM;
 import ru.alexander.rcvm.vm.instructions.system.End;
 import ru.alexander.rcvm.vm.instructions.system.Mov;
@@ -14,7 +14,7 @@ public class TestRCVM {
 
     @Test
     public void rcvm() {
-        Instruction[] instructions = new Instruction[]{
+        RCVMInstruction[] instructions = new RCVMInstruction[]{
                 new End(),
                 new Mov(),
                 new Set()

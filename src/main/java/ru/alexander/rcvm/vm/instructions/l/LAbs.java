@@ -5,21 +5,19 @@ import ru.alexander.rcvm.vm.RCVMInterface;
 
 import java.nio.ByteBuffer;
 
-public class LRs implements RCVMInstruction {
+public class LAbs implements RCVMInstruction {
     @Override
     public boolean execute(RCVMInterface vm) {
-        if (Byte.toUnsignedInt(vm.getCode()) != 21) return false;
+        if (Byte.toUnsignedInt(vm.getCode()) != 60) return false;
         vm.moveCodePtr(1);
-        ByteBuffer buffer = ByteBuffer.wrap(vm.getCode(12));
+        ByteBuffer buffer = ByteBuffer.wrap(vm.getCode(8));
         int out = buffer.getInt();
         int a = buffer.getInt();
-        int b = buffer.getInt();
-        vm.moveCodePtr(12);
+        vm.moveCodePtr(8);
 
         long aVal = ByteBuffer.wrap(vm.getMem(a, 8)).getLong();
-        long bVal = ByteBuffer.wrap(vm.getMem(b, 8)).getLong();
         buffer = ByteBuffer.allocate(8);
-        buffer.putLong(aVal >>> bVal);
+        buffer.putLong(Math.abs(aVal));
         vm.setMem(out, buffer.array());
 
         return true;

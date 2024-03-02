@@ -1,5 +1,5 @@
 package ru.alexander.rcvm.vm;
 
-public interface Instruction {
+public interface RCVMInstruction {
     boolean execute(RCVMInterface vm);
 }
