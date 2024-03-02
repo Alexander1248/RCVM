@@ -3,7 +3,7 @@ package ru.alexander.rcvm.data;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static ru.alexander.compilers.rcl.data.Token.TokenType.*;
+import static ru.alexander.rcvm.data.Token.TokenType.*;
 
 public class SyntaxTree {
     private final List<SyntaxTree> branches = new ArrayList<>();
