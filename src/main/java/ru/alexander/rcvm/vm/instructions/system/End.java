@@ -1,4 +1,4 @@
-package ru.alexander.rcvm.vm.instructions;
+package ru.alexander.rcvm.vm.instructions.system;
 
 import ru.alexander.rcvm.vm.Instruction;
 import ru.alexander.rcvm.vm.RCVMInterface;

@@ -3,9 +3,9 @@ package ru.alexander;
 import org.junit.jupiter.api.Test;
 import ru.alexander.rcvm.vm.Instruction;
 import ru.alexander.rcvm.vm.RCVM;
-import ru.alexander.rcvm.vm.instructions.End;
-import ru.alexander.rcvm.vm.instructions.Mov;
-import ru.alexander.rcvm.vm.instructions.Set;
+import ru.alexander.rcvm.vm.instructions.system.End;
+import ru.alexander.rcvm.vm.instructions.system.Mov;
+import ru.alexander.rcvm.vm.instructions.system.Set;
 
 import java.nio.ByteBuffer;
 import java.util.Arrays;
@@ -20,7 +20,7 @@ public class TestRCVM {
                 new Set()
         };
         RCVM vm = new RCVM(instructions);
-        vm.memory = new byte[128];
+        vm.memory = new byte[256];
         vm.stack = new byte[128];
 
         ByteBuffer buffer = ByteBuffer.allocate(1024);

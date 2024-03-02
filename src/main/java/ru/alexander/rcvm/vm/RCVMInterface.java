@@ -43,7 +43,7 @@ public class RCVMInterface {
         System.arraycopy(value, 0, vm.stack, vm.stackPtr, value.length);
         vm.stackPtr += value.length;
     }
-    public byte[] poll(int length) {
+    public byte[] pull(int length) {
         if (vm.stack == null)
             throw new RCVMException("Stack overflow");
 

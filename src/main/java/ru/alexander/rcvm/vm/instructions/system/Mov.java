@@ -1,4 +1,4 @@
-package ru.alexander.rcvm.vm.instructions;
+package ru.alexander.rcvm.vm.instructions.system;
 
 import ru.alexander.rcvm.vm.Instruction;
 import ru.alexander.rcvm.vm.RCVMInterface;
@@ -8,7 +8,7 @@ import java.nio.ByteBuffer;
 public class Mov implements Instruction {
     @Override
     public boolean execute(RCVMInterface vm) {
-        if (Byte.toUnsignedInt(vm.getCode()) != 2) return false;
+        if (Byte.toUnsignedInt(vm.getCode()) != 3) return false;
         vm.moveCodePtr(1);
         ByteBuffer buffer = ByteBuffer.wrap(vm.getCode(12));
         int from = buffer.getInt();

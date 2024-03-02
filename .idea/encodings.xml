@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java/ru/alexander/rcvm/compilers/CompilationType.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ru/alexander/rcvm/compilers/OptimisationType.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ru/alexander/rcvm/compilers/RCLAssembler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ru/alexander/rcvm/compilers/RCLObfuscator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ru/alexander/rcvm/compilers/Rassel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ru/alexander/rcvm/data/Function.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ru/alexander/rcvm/data/PAC.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ru/alexander/rcvm/data/SyntaxTree.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ru/alexander/rcvm/data/Token.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ru/alexander/rcvm/data/Variable.java" charset="UTF-8" />
+  </component>
+</project>
